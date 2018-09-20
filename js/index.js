@@ -183,5 +183,4 @@ $(function () {
 		}
 		$(".loading-item").css('width', width + "%");
 	}
-
 })
