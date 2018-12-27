@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn">
+
+<head>
+	<title>˜˜˜ ˜˜˜ ˜˜˜ ˜˜˜ ˜˜˜</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Language" content="zh-CN" />
+	<meta name="Author" content="Li.chen" />
+	<meta name="Copyright" content="网站版权" />
+	<meta name="keywords" content="网站关键字" />
+	<meta name="description" content="网站描述" />
+	<link rel="Shortcut Icon" href="icon.ico" />
+</head>
+
+<body>
+	<script src="./js/jquery.min.js"></script>
+	<script>
+     $(function (){
+        var as = {
+            A: '网页可见区域宽：' + document.body.clientWidth,
+            B: '网页可见区域高：' + document.body.clientHeight,
+            C: '网页可见区域宽(包括边线的宽)：' + document.body.offsetWidth,
+            D: '网页可见区域高(包括边线的高)：' + document.body.offsetHeight,
+            E: '网页正文全文宽：' + document.body.scrollWidth,
+            F: '网页正文全文高：' + document.body.scrollHeight,
+            G: '网页被卷去的高：' + document.body.scrollTop,
+            H: '网页被卷去的左：' + document.body.scrollLeft,
+            I: '网页正文部分上：' + window.screenTop,
+            J: '网页正文部分左：' +  window.screenLeft,
+            K: '屏幕分辨率的高：' + window.screen.height,
+            L: '屏幕分辨率的宽：' + window.screen.width,
+            M: '屏幕可用工作区高度：' + window.screen.availHeight,
+            N: '屏幕可用工作区宽度：' + window.screen.availWidth
+        }
+
+        document.write(JSON.stringify(as))
+     })   
+    </script>
+</body>
+
+</html>
