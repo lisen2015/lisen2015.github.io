@@ -1,0 +1,6 @@
+<!-- sidebar.*  Start -->
+    <div class="col-md-3 nav-sidebar mobile_hide">
+        <div class="subtitle"></div>
+        <ul class="sidebar"></ul>
+    </div>
+    <!-- sidebar.*  End -->
