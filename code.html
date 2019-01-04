@@ -87,6 +87,7 @@
     <script>
     $(function() {
 
+        // JSON 格式化输出
         function syntaxHighlight(json) {
             if (typeof json != 'string') {
                 json = JSON.stringify(json, undefined, 2);
@@ -108,6 +109,12 @@
                 return '<span class="' + cls + '">' + match + '</span>';
             });
         }
+
+        /**
+         * ---------------
+         */
+
+
         const fruits = [
             { name: 'apple', color: 'red' },
             { name: 'strawberry', color: 'red' },
@@ -118,12 +125,13 @@
         ];
 
         function test(color) {
+            // 效果等同  return fruits.filter(f => f.color == color); 
             return fruits.filter(function(f) {
                 return f.color == color
             });
         }
 
-        $('#result').html(syntaxHighlight(JSON.stringify(test('red'))));
+        $('#result').html(syntaxHighlight(test('red')));
 
     })
     </script>
