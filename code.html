@@ -61,23 +61,23 @@
 
     <pre>
         <code>
-            const fruits = [
-                { name: 'apple', color: 'red' },
-                { name: 'strawberry', color: 'red' },
-                { name: 'banana', color: 'yellow' },
-                { name: 'pineapple', color: 'yellow' },
-                { name: 'grape', color: 'purple' },
-                { name: 'plum', color: 'purple' }
-            ];
+const fruits = [
+    { name: 'apple', color: 'red' },
+    { name: 'strawberry', color: 'red' },
+    { name: 'banana', color: 'yellow' },
+    { name: 'pineapple', color: 'yellow' },
+    { name: 'grape', color: 'purple' },
+    { name: 'plum', color: 'purple' }
+];
 
-            function test(color) {
-                // 效果等同  return fruits.filter(f => f.color == color); 
-                return fruits.filter(function(f) {
-                    return f.color == color
-                });
-            }
+function test(color) {
+    // 效果等同  return fruits.filter(f => f.color == color); 
+    return fruits.filter(function(f) {
+        return f.color == color
+    });
+}
 
-            console.log(test('red'));
+console.log(test('red'));
         </code>
     </pre>
     <hr>
