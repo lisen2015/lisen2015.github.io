@@ -10,10 +10,43 @@
 	<meta name="keywords" content="网站关键字" />
 	<meta name="description" content="网站描述" />
 	<link rel="Shortcut Icon" href="icon.ico" />
+
+    <style>
+    pre {
+        outline: 1px solid #ccc;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .string {
+        color: green;
+    }
+
+    .number {
+        color: darkorange;
+    }
+
+    .boolean {
+        color: blue;
+    }
+
+    .null {
+        color: magenta;
+    }
+
+    .key {
+        color: red;
+    }
+
+    </style>
 </head>
 
 <body>
+    <pre id="result">
+            
+    </pre>
 	<script src="./js/jquery.min.js"></script>
+    <script src="./js/utils.js"></script>
 	<script>
      $(function (){
         var as = {
@@ -32,8 +65,7 @@
             M: '屏幕可用工作区高度：' + window.screen.availHeight,
             N: '屏幕可用工作区宽度：' + window.screen.availWidth
         }
-
-        document.write(JSON.stringify(as))
+        $('#result').html(syntaxHighlight(as));
      })   
     </script>
 </body>
