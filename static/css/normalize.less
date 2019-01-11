@@ -47,6 +47,7 @@ body {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     user-select: none;
+    box-sizing: border-box;
     outline: none
 }
 
@@ -54,10 +55,14 @@ li {
   list-style: none;
 }
 
-// Focus states
-a:focus {
-    // .tab-focus();
+a {
+  text-decoration: none;
 }
+
+// Focus states
+// a:focus {
+    // .tab-focus();
+// }
 
 // Hover & Active
 a:hover,
