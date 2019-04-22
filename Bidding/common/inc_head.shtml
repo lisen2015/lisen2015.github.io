@@ -1,0 +1,16 @@
+<!-- inc_head.*  Start -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/lib/nprogress.min.css">
+    <script src="./js/lib/nprogress.min.js" type="text/javascript"></script>
+    <script>
+        var require = {
+            // 版本号
+            urlArgs: "v=0.3"
+        };
+    </script>
+    <!-- inc_head.*  End -->

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <!--#include file ="common/inc_head.shtml"-->
+    <link rel="stylesheet" href="./css/index.css?v=20181214">
+    <title>首页</title>
+</head>
+
+<body>
+    <!--#include file ="common/header.shtml"-->
+
+    <div class="container mt-3">
+        <div class="row pt-3">
+            <!--#include file ="common/sidebar.shtml"-->
+            <!--#include file ="content.shtml"-->
+        </div>
+    </div>
+
+    <!--#include file ="common/footer.shtml"-->
+    <!--#include file ="common/inc_script.shtml"-->
+</body>
+
+</html>
