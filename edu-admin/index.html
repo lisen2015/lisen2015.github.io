@@ -1,0 +1,330 @@
+<!--
+ * @Author: Li.chen
+ * @LastEditors: Li.chen
+ * @Description: File Description .
+ * @Date: 2019-04-10 13:52:28
+ * @LastEditTime: 2019-04-23 17:40:36
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>留学生来华管理</title>
+	<!-- Bootstrap core CSS-->
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Custom fonts for this template-->
+	<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<!-- Page level plugin CSS-->
+	<link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+	<!-- Custom styles for this template-->
+	<link href="css/admin.css" rel="stylesheet">
+</head>
+
+<body class="fixed-nav sticky-footer bg-edu" id="page-top">
+	<!-- Navigation-->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-header-edu fixed-top" id="mainNav">
+		<a class="navbar-brand" href="index.html">留学生来华管理</a>
+		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+			data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+
+				<li class="nav-item active" data-toggle="tooltip" data-placement="right" title="首页">
+					<a class="nav-link" href="index.html">
+						<i class="fa fa-area-chart"></i>
+						<span class="nav-link-text">首页</span>
+					</a>
+				</li>
+				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="招生录取">
+					<a class="nav-link nav-link-collapse collapsed" data-toggle="collapse"
+						href="#collapseStudentManager" data-parent="#exampleAccordion">
+						<i class="fa fa-user-plus"></i>
+						<span class="nav-link-text">招生录取</span>
+					</a>
+					<ul class="sidenav-second-level collapse" id="collapseStudentManager">
+						<li>
+							<a href="info.html">
+								网报审核
+							</a>
+
+						</li>
+						<li>
+							<a class="nav-link-collapse collapse" data-toggle="collapse" href="#collapseMulti2">
+								接机预定管理
+							</a>
+							<ul class="sidenav-third-level" id="collapseMulti2">
+								<li>
+									<a href="eduList.html">
+										预录取列表
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:;">
+								站内消息
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="迎新管理">
+					<a class="nav-link" href="detailUpd.html">
+						<i class="fa fa-users"></i>
+						<span class="nav-link-text">迎新管理</span>
+					</a>
+				</li>
+				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="在校管理">
+					<a class="nav-link" href="javascript:;">
+						<i class="fa fa-desktop"></i>
+						<span class="nav-link-text">在校管理</span>
+					</a>
+				</li>
+				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="毕业管理">
+					<a class="nav-link" href="javascript:;">
+						<i class="fa fa-file-text-o"></i>
+						<span class="nav-link-text">毕业管理</span>
+					</a>
+				</li>
+				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="校友管理">
+					<a class="nav-link" href="javascript:;">
+						<i class="fa fa-comments"></i>
+						<span class="nav-link-text">校友管理</span>
+					</a>
+				</li>
+				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="数据字典">
+					<a class="nav-link" href="javascript:;">
+						<i class="fa fa-table"></i>
+						<span class="nav-link-text">数据字典</span>
+					</a>
+				</li>
+				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="综合管理">
+					<a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMultiCogs"
+						data-parent="#exampleAccordion">
+						<i class="fa fa-cogs"></i>
+						<span class="nav-link-text">综合管理</span>
+					</a>
+					<ul class="sidenav-second-level collapse" id="collapseMultiCogs">
+						<li>
+							<a href="edata.html">
+								<i class="fa fa-home"></i>
+								<span class="nav-link-text">决策中心</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<i class="fa fa-cog"></i>
+								<span class="nav-link-text">系统设置</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="navbar-nav sidenav-toggler">
+				<li class="nav-item">
+					<a class="nav-link text-center" id="sidenavToggler">
+						<i class="fa fa-fw fa-angle-left"></i>
+					</a>
+				</li>
+			</ul>
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="javascript:;">
+						<i class="fa fa-home fa-lg"></i>
+						高校主页
+					</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown"
+						aria-haspopup="true" aria-expanded="false">
+						<i class="fa fa-fw fa-bell"></i>
+						<span class="d-lg-none">消息
+							<span class="badge badge-pill badge-primary">6条</span>
+						</span>
+						<span class="indicator text-primary d-none d-lg-block">
+							<i class="fa fa-fw fa-circle"></i>
+						</span>
+					</a>
+					<div class="dropdown-menu" aria-labelledby="alertsDropdown">
+						<a class="dropdown-item" href="#">
+							<strong>系统消息</strong>
+							<span class="small float-right text-muted">1分钟前</span>
+							<div class="dropdown-message small">您好、您收到了一条新的通知..</div>
+						</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item text-center small" href="#">清空消息</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link mr-lg-2" id="AuthDropdown" href="#" data-toggle="dropdown" aria-haspopup="true"
+						aria-expanded="false">
+						<img src="http://img.cssmoban.com/UploadFiles/2015/2/2015031912114793406.jpg" class="auth-pic"
+							alt="Auth">
+					</a>
+					<div class="dropdown-menu" aria-labelledby="AuthDropdown">
+						<a class="dropdown-item hcolor" href="javascript:;" data-toggle="modal"
+							data-target="#uploadAuthPicModalCenter">修改头像</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item hcolor" href="javascript:;">个人资料</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item hcolor" href="javascript:;">我的通讯录</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item hcolor" href="javascript:;">修改密码</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item hcolor" href="javascript:;" data-toggle="modal"
+							data-target="#exampleModal">安全退出</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="content-wrapper">
+		<div class="container-fluid">
+			<!-- Breadcrumbs-->
+			<ol class="breadcrumb">
+					<li class="breadcrumb-item active">
+						<a href="index.html">首页</a>
+					</li>
+					<button class="btn btn-primary btn-refsh">刷新</button>
+			</ol>
+			<div class="row">
+				<div class="col-lg-8">
+					<!-- Example Bar Chart Card-->
+					<div class="card mb-3">
+						<div class="card-header">
+							<i class="fa fa-bar-chart"></i> 基本信息情况</div>
+						<div class="card-body">
+							<canvas id="myBarChart" width="100"></canvas>
+						</div>
+						<div class="card-footer small text-muted">数据更新自
+							<script>document.write(new Date().getFullYear() + "-" + Number(new Date().getMonth() + 1) + "-" + new Date().getDate() + " " + new Date().getHours() + ":" + new Date().getMinutes())</script>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<!-- Example Pie Chart Card-->
+					<div class="card mb-3">
+						<div class="card-header">
+							<i class="fa fa-pie-chart"></i> 护照、局留许可、保险到期情况</div>
+						<div class="card-body">
+							<canvas id="myPieChart" width="100" height="108"></canvas>
+						</div>
+						<div class="card-footer small text-muted">数据更新自
+							<script>document.write(new Date().getFullYear() + "-" + Number(new Date().getMonth() + 1) + "-" + new Date().getDate() + " " + new Date().getHours() + ":" + new Date().getMinutes())</script>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-8">
+					<!-- Example Bar Chart Card-->
+					<div class="card mb-3">
+						<div class="card-header">
+							<i class="fa fa-bar-chart"></i> 迎新情况</div>
+						<div class="card-body">
+							<canvas id="myBarChart2" width="100"></canvas>
+						</div>
+						<div class="card-footer small text-muted">数据更新自
+							<script>document.write(new Date().getFullYear() + "-" + Number(new Date().getMonth() + 1) + "-" + new Date().getDate() + " " + new Date().getHours() + ":" + new Date().getMinutes())</script>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<!-- Example Pie Chart Card-->
+					<div class="card mb-3">
+						<div class="card-header">
+							<i class="fa fa-pie-chart"></i> 其他情况</div>
+						<div class="card-body">
+							<canvas id="myPieChart2" width="100" height="108"></canvas>
+						</div>
+						<div class="card-footer small text-muted">数据更新自
+							<script>document.write(new Date().getFullYear() + "-" + Number(new Date().getMonth() + 1) + "-" + new Date().getDate() + " " + new Date().getHours() + ":" + new Date().getMinutes())</script>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /.container-fluid-->
+		<!-- /.content-wrapper-->
+		<footer class="sticky-footer">
+			<div class="container">
+				<div class="text-center">
+					<small>Copyright © -- </small>
+				</div>
+			</div>
+		</footer>
+		<!-- Scroll to Top Button-->
+		<a class="scroll-to-top rounded" href="#page-top">
+			<i class="fa fa-angle-up"></i>
+		</a>
+		<!-- Logout Modal-->
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+			aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">提示</h5>
+						<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+					</div>
+					<div class="modal-body">点击确认退出当前系统.</div>
+					<div class="modal-footer">
+						<button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+						<a class="btn btn-primary" href="login.html">退出</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Bootstrap core JavaScript-->
+		<script src="vendor/jquery/jquery.min.js"></script>
+		<script src="vendor/bootstrap/js/popper.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+		<!-- Core plugin JavaScript-->
+		<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+		<!-- Page level plugin JavaScript-->
+		<script src="vendor/chart.js/Chart.min.js"></script>
+		<script src="vendor/datatables/jquery.dataTables.js"></script>
+		<script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+		<!-- Custom scripts for all pages-->
+		<script src="js/admin.min.js"></script>
+		<!-- Custom scripts for this page-->
+		<script src="js/admin-datatables.min.js"></script>
+		<script src="js/admin-charts.js"></script>
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="uploadAuthPicModalCenter" tabindex="-1" role="dialog"
+		aria-labelledby="uploadAuthPicModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="uploadAuthPicModalLongTitle">修改头像</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="dline">
+						<i class="fa fa-plus" aria-hidden="true"></i>
+						<div>将照片拖到这里</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-primary">确定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
