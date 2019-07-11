@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn">
+<head>
+	<title>变大˜ 变大˜˜  变大˜˜˜</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="zh-CN" />
+    <meta name="Author" content="Li.chen" /> 
+    <meta name="Copyright" content="网站版权" /> 
+    <meta name="keywords" content="网站关键字" />
+    <meta name="description" content="网站描述" />
+    <link rel="Shortcut Icon" href="icon.ico" />
+	<!-- External CSS -->
+	<link rel="stylesheet" href="">
+	<style>
+		/* ... */
+		body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; } 
+	    body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; } 
+	    h1, h2, h3, h4, h5, h6{ font-size:100%; } 
+	    address, cite, dfn, em, var { font-style:normal; } 
+	    code, kbd, pre, samp { font-family:couriernew, courier, monospace; } 
+	    small{ font-size:12px; } 
+	    ul, ol { list-style:none; } 
+	    a { text-decoration:none; } 
+	    a:hover { text-decoration:underline; } 
+	    sup { vertical-align:text-top; } 
+	    sub{ vertical-align:text-bottom; } 
+	    legend { color:#000; } 
+	    fieldset, img { border:0; } 
+	    button, input, select, textarea { font-size:100%; } 
+	    table { border-collapse:collapse; border-spacing:0; }
+	    /* ... */
+	    body{
+	    	background-color: #0d111b;
+	    }
+		div{
+			box-sizing: border-box;
+		}
+	    .green{
+			background-color: green;
+	    }
+	    .blue{
+			background-color: blue;
+	    }
+	    .main{
+    	    width: 400px;
+		    height: 600px;
+		    border: 1px solid #ccc;
+		    margin: 200px auto;
+		    text-align: center;
+	        box-shadow: 0px 0px 20px 0px #a5773e;
+	    }
+	    #content{
+	    	width: 30px;
+	    	height: 60px;
+	    	margin: 270px auto;
+	    	text-align: center;
+	    }
+	    #content>i{
+	    	width: 30px;
+	    	height: 30px;
+	    	display: block;
+	    	border-radius: 15px;
+	    }
+
+	    .transformX{
+	    	transform:rotate(180deg);
+			-ms-transform:rotate(180deg); /* Internet Explorer */
+			-moz-transform:rotate(180deg); /* Firefox */
+			-webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+			-o-transform:rotate(180deg); /* Opera */
+			-webkit-transition: all .15s ease-in-out;
+      		transition: all .15s ease-in-out;
+	    }
+
+	    .transformY{
+	    	transform:rotate(0deg);
+			-ms-transform:rotate(0deg); /* Internet Explorer */
+			-moz-transform:rotate(0deg); /* Firefox */
+			-webkit-transform:rotate(0deg); /* Safari 和 Chrome */
+			-o-transform:rotate(0deg); /* Opera */
+			-webkit-transition: all .15s ease-in-out;
+      		transition: all .15s ease-in-out;
+	    }
+	    .biu-top{
+    	    width: 20px;
+		    height: 20px;
+		    display: block;
+		    border-radius: 15px;
+		    position: absolute;
+		    top: 201px; /* 451px; */
+		    margin-left: 189px;
+	    }
+
+	    .biu-bottom{
+    	    width: 20px;
+		    height: 20px;
+		    display: block;
+		    border-radius: 15px;
+		    position: absolute;
+		    top: 779px; /* 531px; */
+		    margin-left: 189px;
+	    }
+		.times{
+		    float: left;
+		    color: #fff;
+		    padding: 5px 5px;
+		    opacity: 0.5;
+		}
+		.result{
+			float: right;
+		    color: #fff;
+		    padding: 5px 5px;
+		    opacity: 0.5;
+		}
+		.msak{
+			display: none;
+			color: #ffffff;
+			font-size: 60px;
+			position: absolute;
+			width: 400px;
+			height: 600px;
+			text-align: center;
+			padding-top: 80px;
+			background-color: #402d1ff0;
+			z-index: 1;
+		}
+
+		.msak>a{
+	        text-decoration: none;
+			color: #f5dbdb;
+			background-color: #02964b;
+			border-radius: 20px;
+			padding: 5px 20px;
+			font-size: 34px;
+			line-height: 180px;
+		}
+		.msak>.res{
+		    width: 400px;
+		    display: inline-block;
+		    font-size: 30px;
+		    margin-top: 50px;
+		    color: #1bab1b;
+		}
+		.msak>.localRes{
+		    width: 400px;
+		    display: inline-block;
+		    font-size: 30px;
+		    margin-top: 130px;
+		    color: #866868;
+		}
+
+		@keyframes roate {
+            0% {
+                transform: rotateZ(0)
+            }
+            100% {
+                transform: rotateZ(360deg)
+            }
+        }
+
+        .gameOver{
+	    	animation: roate 1s infinite linear;
+        }
+	</style>
+	<!-- JavaScript -->
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var localRes = window.localStorage.getItem("localRes");
+			if (localRes == null || localRes == "") {
+				alert("提示：\r\r按键盘左右键来控制“绿-蓝”块转动\r\r\r小球与相同颜色相遇得分\r\r反之游戏结束");
+				init();
+			}else{
+				$(".msak .msg").text("Start");
+				$(".msak .localRes").text("历史最高分："+localRes+"分");
+				$(".msak").show();
+			}
+			$(".msak>a").click(function(){
+				$(".msak").hide();
+				$(".result i").text(0);
+				$(".biu-top,.biu-bottom").remove();
+				$("#content").removeClass("gameOver");
+				init();
+			});
+			function init(){
+				var resultNum = 1,
+				animateTime = 1000;
+				var biuTimer = window.setInterval(function(){
+					var randomNum = parseInt(Math.random()*100 % 2);
+					var classz = parseInt(Math.random()*100 % 2) ? " blue" : " green";
+					if (randomNum) {
+						var biuSpan = $("<span/>",{"class":"biu-top" + classz});
+						biuSpan.appendTo($(".main"));
+						biuSpan.animate({
+							"top": "451px"
+						},animateTime, "linear", function() {
+							if (($("#content").hasClass("transformX") && classz.indexOf("blue") >= 0) || $("#content").hasClass("transformY") && classz.indexOf("green") >= 0) {
+								InitGameOver(resultNum++);
+								$(this).remove();
+							}else{
+								gameOvers({
+									thiz:$(this),
+									timer:biuTimer
+								});
+							}
+						});
+					}else{
+						var biuSpan = $("<span/>",{"class":"biu-bottom" + classz});
+						biuSpan.appendTo($(".main"));
+						biuSpan.animate({
+							"top": "531px"
+						},animateTime, "linear", function() {
+							if (($("#content").hasClass("transformX") && classz.indexOf("green") >= 0) || $("#content").hasClass("transformY") && classz.indexOf("blue") >= 0) {
+								InitGameOver(resultNum++);
+								$(this).remove();
+							}else{
+								gameOvers({
+									thiz:$(this),
+									timer:biuTimer
+								});
+							}
+						});
+					}
+				},900)
+
+				function gameOvers(obj){
+					window.clearInterval(obj.timer);
+					$(".biu-top,.biu-bottom").stop();
+					$(obj.thiz).css({"box-shadow":"0px 0px 20px 6px #ffab12"});
+					$(".msak").show();
+					$("#content").addClass("gameOver");
+					$(document).unbind("keydown");
+				}
+				function InitGameOver(res){
+					$(".result i").text(res);
+					setResult(res);
+					$(".msak .msg").text("Game Over!");
+					$(".msak .res").text("得分："+res+"分");
+					var localRes = window.localStorage.getItem("localRes");
+					$(".msak .localRes").text("历史最高分："+localRes+"分");
+				}
+				
+				function setResult(res){
+					var localRes = window.localStorage.getItem("localRes");
+					if (localRes == null || localRes == "") {
+						window.localStorage.setItem("localRes",res);
+					}else{
+						if (Number(localRes) < Number(res)) {
+							window.localStorage.setItem("localRes",res);
+						}
+					}
+				}
+
+				window.setInterval(function(){
+					animateTime-=20;
+				},1000);
+
+				$(document).keydown(function(event) {
+					var keyCode = event.keyCode;
+					/* Act on the event */
+					if (keyCode == 38 || keyCode == 37) {
+						$("#content").removeClass().addClass("transformY");
+					}else if(keyCode == 40 || keyCode == 39){
+						$("#content").removeClass().addClass("transformX");
+					}
+				});
+			}
+
+		})
+	</script>
+</head>
+<body>
+	<div class="main">
+		<!-- <span class="times">
+			计时：00:00
+		</span> -->
+		<span class="result">
+			得分：<i>0</i>
+		</span>
+		<div class="msak">
+			<span class="msg">Game Over!</span>
+			<span class="res">得分：0分</span>
+			<span class="localRes">历史最高分：0分</span>
+			<a href="javascript:;">开始</a>
+		</div>
+		<div id="content" class="transformX">
+			<i class="green"></i>
+			<i class="blue"></i>
+		</div>
+	</div>
+</body>
+</html>
